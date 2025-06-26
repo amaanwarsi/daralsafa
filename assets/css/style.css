@@ -1,0 +1,997 @@
+:root {
+    --accent: #246afe;
+    --text: #0b0a0a;
+    /* --background: #fafafa; */
+    --background: #ebf0fe;
+    --light: #fff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+    border: 1px dotted red; */
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: "Poppins", serif;
+    overflow-x: hidden;
+    background: var(--background);
+}
+
+/* .dark {
+    background: #121212;
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.dark iframe,
+.dark img,
+.dark html {
+    filter: invert(1) hue-rotate(180deg) brightness(105%) contrast(105%);
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700
+}
+
+h1 {
+    font-size: 3rem
+}
+
+h2 {
+    font-size: 2.5rem
+}
+
+h3 {
+    font-size: 2rem
+}
+
+h4 {
+    font-size: 1.5rem
+}
+
+h5 {
+    font-size: 1.25rem
+}
+
+h6 {
+    font-size: 1rem
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* Column Classes */
+[class*="col-"] {
+    /* padding: 15px; */
+    flex: 1;
+}
+
+.col-1 {
+    flex: 0 0 8.33%;
+    max-width: 8.33%;
+}
+
+.col-2 {
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+
+.col-5 {
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-7 {
+    flex: 0 0 58.33%;
+    max-width: 58.33%;
+}
+
+.col-8 {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+}
+
+.col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.col-10 {
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+}
+
+.col-11 {
+    flex: 0 0 91.66%;
+    max-width: 91.66%;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.hide {
+    display: none !important
+}
+
+.hide-lg {
+    display: none !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-bold {
+    font-weight: bold !important;
+}
+
+.heading {
+    color: #262626;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.9;
+    margin: 5rem 0;
+    font-family: "Urbanist", sans-serif;
+}
+
+.heading span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.container {
+    width: 95%;
+    max-width: 950px;
+    margin: 0 auto;
+    /* padding: 0 15px; */
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    font-size: 1.4rem;
+    height: 6rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0 3.5rem;
+    border-radius: 40rem;
+    /* background: #161a1d; */
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul a {
+    transition: .2s;
+    color: #3A3A3A;
+    /* color: #e6e6e6; */
+}
+
+nav ul a:hover {
+    /* color: #fff; */
+    color: #000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.logo a {
+    font-family: "Urbanist", sans-serif;
+    color: #121212;
+    /* color: #fff; */
+    text-decoration: none;
+}
+
+.nav-btns {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.nav-btn,
+.btn {
+    background: var(--accent);
+    color: var(--light);
+    font-size: 1.3rem;
+    padding: 1.1rem 1.6rem;
+    border-radius: 8rem;
+    text-decoration: none;
+}
+
+.nav-btn.icon {
+    border-radius: 50%;
+    padding: .6rem .8rem;
+}
+
+main {
+    margin: 3rem 0;
+}
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--light);
+}
+
+.hero .content {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+}
+
+.hero-secondary {
+    margin: 3rem 0;
+}
+
+.hero-primary .content:last-child {
+    background-color: var(--accent);
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .content h1 {
+    font-family: "Urbanist", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    letter-spacing: .5px;
+    color: var(--text);
+}
+
+.hero .content h4 {
+    color: var(--accent);
+    line-height: 1.6;
+    margin-bottom: .4rem;
+}
+
+.hero .content p {
+    font-size: 1.4rem;
+    /* color: #e6e6e6; */
+    color: #3b4044;
+    margin: 1rem 0 3rem 0;
+    letter-spacing: .3px;
+    line-height: 1.5;
+}
+
+.secondary-btn,
+.hero .content .btn {
+    text-decoration: none;
+    /* color: var(--text); */
+    color: var(--light);
+    /* background-color: var(--light); */
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 0 .65rem 0 2rem;
+    height: 4.4rem;
+    border-radius: 8rem;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn svg {
+    width: 3.4rem;
+    height: 3.4rem;
+    background: var(--light);
+    border-radius: 50%;
+    color: #202020;
+    padding: .6rem;
+}
+
+.hero .content .img-container {
+    width: 100%;
+}
+
+.hero .content img,
+.course-card .icon img,
+.feature-card .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* clip-path: polygon(35% 0, 100% 0%, 66% 100%, 0 100%); */
+    clip-path: circle(50%);
+}
+
+.partener-section {
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.partener-section p {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+.partener-section p span {
+    color: var(--accent);
+}
+
+.library-section,
+.course-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 2.5rem;
+    background-color: var(--light);
+    border-radius: 2rem;
+}
+
+.library-section h3,
+.course-section h3 {
+    font-family: "Urbanist", sans-serif;
+    font-size: 2.3rem;
+    color: var(--text);
+}
+
+.library-section p,
+.course-section p {
+    color: #1a1a1a;
+    font-size: 1.4rem;
+    margin: .7rem 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    margin: 3.5rem 0 4rem 0;
+}
+
+.tab {
+    border: 1px solid #737373;
+    color: #404040;
+    border-radius: 40px;
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.tab:hover {
+    background: var(--text);
+    color: var(--light);
+    transition: background-color .2s ease-in-out;
+}
+
+.tab.active {
+    border: none;
+    height: 3.6rem;
+    color: var(--light);
+    background: var(--text);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.course-card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.show-more-container {
+    height: 8rem;
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-section {
+    height: 100%;
+    width: 100%;
+    margin: 3rem 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.course-card,
+.feature-card {
+    width: 100%;
+    height: 46rem;
+    border-radius: 2rem;
+    background: var(--light);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.feature-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.course-card .icon,
+.feature-card .icon {
+    width: 21rem;
+    height: 21rem;
+}
+
+.course-card h2,
+.feature-card h2 {
+    font-family: "Urbanist", sans-serif;
+    font-size: 2.3rem;
+    font-weight: 900;
+    margin: 3rem auto 1.3rem auto;
+    color: var(--text);
+    color: #1b1818;
+}
+
+.course-card p,
+.feature-card p {
+    font-size: 1.3rem;
+    color: #3b4044;
+    margin: 0 .5rem;
+    line-height: 1.4;
+}
+
+.about-section {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    /* background: #fcf6cf; */
+    margin: 3rem 0;
+    border-radius: 0;
+    background-color: #000 !important;
+}
+
+.about-section .content {
+    width: 100%;
+}
+
+.about-section .content img {
+    max-height: 300px;
+    max-width: 300px;
+}
+
+
+.about-section.hero .content:last-child {
+    background-color: var(--text) !important;
+}
+
+
+
+
+.table-container {
+    width: 100%;
+    max-width: 960px;
+    overflow-x: auto;
+    margin-top: 3rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #4a5568;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    white-space: nowrap;
+}
+
+td {
+    font-size: 1.4rem;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+td a {
+    color: #2d3748;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td:nth-child(3),
+td:nth-child(4) {
+    white-space: nowrap;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* 
+tr:hover {
+    background-color: #f0f4f8;
+} */
+
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.product-card {
+    height: 35rem;
+    /* height: 35rem; */
+    /* outline: 1px solid #333; */
+    border-radius: 1rem;
+    overflow: hidden;
+    /* text-align: center; */
+    transition: transform 0.3s;
+    padding: .5rem .5rem 1rem .5rem;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    background-color: #202020;
+}
+
+.product-card .card-img {
+    height: 75%;
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-bottom: 1.9rem;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    /* height: 82%; */
+    object-fit: cover;
+}
+
+.product-card .ratings {
+    color: #ffd500;
+}
+
+.product-card h3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: .2rem 0 .4rem 0;
+    /* margin: 1rem 0 .4rem 0; */
+    color: var(--text);
+    line-height: 1.8;
+    letter-spacing: 1px;
+    line-break: auto;
+}
+
+.product-card span {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 1.2px;
+    color: #fff;
+    /* color: #ffd500; */
+}
+
+.testimonials {
+    width: 100vw;
+    height: 100%;
+}
+
+.testimonials .product-card {
+    position: relative;
+    height: 25rem;
+    background: #fff;
+    padding: 3rem 2rem;
+    overflow: visible;
+    text-align: center;
+    cursor: auto;
+    margin: 1rem auto;
+}
+
+.testimonials .product-card h3 {
+    margin-top: 1rem;
+}
+
+.testimonials .product-card p {
+    color: #3b4044;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.testimonial-pic {
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5.3rem;
+    width: 5.3rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-position: no-repeat;
+}
+
+.quote {
+    margin: 1rem auto;
+    height: 40rem;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    gap: 1rem;
+}
+
+.quote p {
+    font-size: 3rem;
+    color: #262626;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.quote span {
+    font-size: 2.6rem;
+    color: var(--accent);
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+footer {
+    height: auto;
+    width: 97%;
+    margin: 0 auto;
+    color: var(--light);
+    background: var(--accent);
+    border-top-right-radius: 4rem;
+    border-top-left-radius: 4rem;
+}
+
+.footer-container {
+    padding: 5rem 4rem 2rem 4rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.footer-heading {
+    color: var(--light);
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+footer .logo {
+    font-weight: 600;
+    font-size: 2.3rem;
+    align-self: flex-start;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+footer ul {
+    list-style-type: none;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    /* font-weight: 500; */
+}
+
+footer ul li {
+    margin-bottom: 1rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        padding: 10px;
+    }
+
+    .testimonials .product-card {
+        height: 19rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        height: 26.8rem;
+        cursor: none;
+    }
+
+    .product-card .card-img {
+        height: 70%;
+    }
+
+    .product-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-card span {
+        font-size: 1.35rem;
+    }
+}
+
+
+
+/* Mobile styles go here */
+@media (max-width: 768px) {
+
+    body,
+    html {
+        overflow-x: hidden
+    }
+
+    .hide-lg {
+        display: block !important;
+    }
+
+    .hide-md {
+        display: none !important;
+    }
+
+    .header-container {
+        width: 100%;
+    }
+
+    nav {
+        border-radius: 0;
+        margin-top: 0;
+        padding: 1rem 1.8rem;
+    }
+
+    .nav-btn.icon {
+        border-radius: 50%;
+        padding: .7rem .9rem;
+    }
+
+    .hero {
+        height: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .hero-secondary {
+        padding: 0 1rem;
+    }
+
+    .hero-secondary .content h1 {
+        letter-spacing: normal;
+    }
+
+    .hero .content {
+        width: 100%;
+        padding: 3rem 1.5rem;
+    }
+
+    .course-section .grid-container {
+        grid-template-columns: 1fr;
+        padding: 0 !important;
+    }
+
+    .course-card {
+        flex-direction: row-reverse;
+        height: 12rem;
+        padding: 1rem;
+        text-align: unset;
+    }
+
+    .course-card .text-content {
+        padding: 1rem;
+        width: 65%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .course-card .icon {
+        height: 90%;
+        width: 35%;
+    }
+
+    .course-card .icon img {
+        clip-path: none;
+        border-radius: 1rem;
+    }
+
+    .course-card h2 {
+        font-size: 1.6rem;
+        margin: 0 0 .5rem 0;
+    }
+
+    .course-card p {
+        font-size: 1.2rem;
+        margin: 0 !important;
+        line-height: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .feature-section {
+        padding: 0 1rem;
+        flex-direction: column;
+    }
+
+    .feature-card {
+        height: 48rem;
+    }
+
+    .feature-card h2 {
+        margin-bottom: 1.7rem;
+    }
+
+    .feature-card p {
+        font-size: 1.4rem;
+    }
+
+
+    .testimonials .product-card {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .testimonials .product-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .quote {
+        height: 100%;
+        padding: 4rem 0;
+        gap: 4rem;
+    }
+
+    .quote p {
+        line-height: 1.7;
+    }
+
+    .footer-container {
+        text-align: center;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    footer .logo {
+        align-self: center;
+    }
+}
